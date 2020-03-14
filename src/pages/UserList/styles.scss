@@ -1,0 +1,21 @@
+.user-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+
+  > * {
+    margin: 10px;
+  }
+
+  .loading {
+    width: 100%;
+    text-align: center;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+}
