@@ -10,12 +10,12 @@ export interface State {
   users: UserCoarse[];
 }
 
-const initState: State = {
+export const initState: State = {
   loading: false,
   users: []
 };
 
-const reducer = (state = initState, action: { type: string; payload: any }) => {
+const reducer = (state = initState, action: { type: string; payload?: any }) => {
   switch (action.type) {
     case TYPE_GET_USER_LIST:
       return { ...state, loading: true };
