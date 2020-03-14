@@ -55,8 +55,8 @@ const UserList: FunctionComponent = () => {
       <div className="num-of-items">Total: {users.length}</div>
       <div className="items" onScroll={handleScroll} ref={ref}>
         {users.map(user => (
-          <Link to={`/user?username=${user.login}`}>
-            <UserCard {...user} key={user.id} />
+          <Link to={`/user?username=${user.login}`} key={user.id}>
+            <UserCard {...user} />
           </Link>
         ))}
         {loading && <div className="loading">loading...</div>}
