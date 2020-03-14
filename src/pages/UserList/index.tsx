@@ -51,13 +51,16 @@ const UserList: FunctionComponent = () => {
   }, [checkLoadMore]);
 
   return (
-    <div className="page user-list" onScroll={handleScroll} ref={ref}>
-      {users.map(user => (
-        <Link to={`/user?username=${user.login}`}>
-          <UserCard {...user} key={user.id} />
-        </Link>
-      ))}
-      {loading && <div className="loading">loading...</div>}
+    <div className="page user-list">
+      <div className="num-of-items">Total: {users.length}</div>
+      <div className="items" onScroll={handleScroll} ref={ref}>
+        {users.map(user => (
+          <Link to={`/user?username=${user.login}`}>
+            <UserCard {...user} key={user.id} />
+          </Link>
+        ))}
+        {loading && <div className="loading">loading...</div>}
+      </div>
     </div>
   );
 };

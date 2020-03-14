@@ -20,10 +20,10 @@ const UserDetail: FunctionComponent = () => {
   );
 
   useEffect(() => {
-    if (username) {
+    if (username && username !== user?.login) {
       dispatch(getUserDetail(username));
     }
-  }, [dispatch, username]);
+  }, [dispatch, username, user]);
 
   if (!username) {
     return <Redirect to="/" />;
@@ -38,7 +38,7 @@ const UserDetail: FunctionComponent = () => {
           <div>Name: {user.name}</div>
           <div>Bio: {user.bio}</div>
           <div>Username: {user.login}</div>
-          <div>Is site admin: {Boolean(user.site_admin)}</div>
+          <div>Is site admin: {String(Boolean(user.site_admin))}</div>
           <div>Location: {user.location}</div>
           <div>Blog: {user.blog}</div>
         </>

@@ -1,17 +1,28 @@
 .user-list {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-start;
-  align-content: flex-start;
+  flex-direction: column;
 
-  > * {
-    margin: 10px;
-  }
-
+  .num-of-items,
   .loading {
     width: 100%;
     text-align: center;
+    padding: 10px 0;
+  }
+
+  .items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+
+    flex: 1;
+
+    overflow: scroll;
+
+    > * {
+      margin: 10px;
+    }
   }
 
   a {
