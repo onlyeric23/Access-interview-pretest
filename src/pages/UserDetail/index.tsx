@@ -38,7 +38,7 @@ const UserDetail: FunctionComponent = () => {
           <div>Name: {user.name}</div>
           <div>Bio: {user.bio}</div>
           <div>Username: {user.login}</div>
-          {/* <div>{user.site_admin}</div> */}
+          <div>Is site admin: {Boolean(user.site_admin)}</div>
           <div>Location: {user.location}</div>
           <div>Blog: {user.blog}</div>
         </>
