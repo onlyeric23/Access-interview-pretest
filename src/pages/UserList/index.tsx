@@ -5,20 +5,18 @@ import React, {
   useRef
 } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useHistory } from "react-router";
+import { Link } from "react-router-dom";
 
 import { getUserList } from "../../reducers/userList/actions";
 import { State as StateUserList } from "../../reducers/userList/reducer";
 import UserCard from "../../components/UserCard";
 
 import "./styles.scss";
-import { Link } from "react-router-dom";
 
 const DISTANCE = 60;
 
 const UserList: FunctionComponent = () => {
   const dispatch = useDispatch();
-  const history = useHistory();
   const { loading, users } = useSelector(
     (store: { userList: StateUserList }) => store.userList
   );

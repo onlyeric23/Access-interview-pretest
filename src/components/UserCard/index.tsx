@@ -3,7 +3,7 @@ import { UserCoarse } from "../../common/interface";
 
 import "./styles.scss";
 
-const UserRow: FC<UserCoarse & { onClick: () => void }> = ({
+const UserRow: FC<UserCoarse> = ({
   avatar_url,
   login,
   site_admin
